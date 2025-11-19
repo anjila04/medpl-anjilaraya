@@ -4,81 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjila Raya Portfolio</title>
+
     <style>
-        /* ---------- GENERAL STYLES ---------- */
         body {
             margin: 0;
-            font-family: "Poppins", sans-serif;
+            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #ffe6f7, #e7f1ff);
             color: #333;
         }
 
         header {
             text-align: center;
-            padding: 80px 20px 40px;
-            animation: fadeIn 1.6s ease-in-out;
+            padding: 60px 20px;
         }
 
         header h1 {
             font-size: 3rem;
             margin: 0;
-            letter-spacing: 2px;
             color: #444;
         }
 
         header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
             color: #555;
+            margin-top: 10px;
         }
 
-        /* ---------- NAVIGATION ---------- */
         nav {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding-bottom: 30px;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         nav a {
+            margin: 0 15px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: bold;
             color: #444;
             padding: 8px 14px;
             border-radius: 8px;
+            background: #ffffffaa;
             transition: 0.3s;
         }
 
         nav a:hover {
-            background: #ffffffaa;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            background: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
-        /* ---------- HOMEWORK CARDS ---------- */
         .container {
             max-width: 900px;
             margin: auto;
             padding: 20px;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
         .card {
             background: white;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeUp 1.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
 
         .card h3 {
@@ -87,19 +70,8 @@
 
         .card a {
             text-decoration: none;
-            font-weight: 600;
+            font-weight: bold;
             color: #6a4bc9;
-        }
-
-        /* ---------- ANIMATIONS ---------- */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); } 
         }
     </style>
 </head>
@@ -108,34 +80,33 @@
 
     <header>
         <h1>ANJILA RAYA</h1>
-        <p>Emerging Media Student · Designer · Digital Storyteller</p>
+        <p>Emerging Media · Designer · Digital Storyteller</p>
     </header>
 
     <nav>
-        <a href="#homeworks">Homeworks</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#homework">Homeworks</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
     </nav>
 
     <div class="container">
-        <h2 id="homeworks">Homework Assignments</h2>
+        <h2 id="homework">Homework Assignments</h2>
 
-        <div class="grid">
-            <div class="card">
-                <h3>Homework #1</h3>
-                <p>My personal design + statement.</p>
-                <a href="homework1.html">View →</a>
-            </div>
+        <div class="card">
+            <h3>Homework #1</h3>
+            <p>My personal design and storytelling statement.</p>
+            <a href="homework1.html">View →</a>
+        </div>
 
-            <div class="card">
-                <h3>Homework #2</h3>
-                <p>Coming soon...</p>
-            </div>
+        <div class="card">
+            <h3>Homework #2</h3>
+            <p>Reflection on photography and image making.</p>
+            <a href="readings.html">View →</a>
+        </div>
 
-            <div class="card">
-                <h3>Homework #3</h3>
-                <p>Coming soon...</p>
-            </div>
+        <div class="card">
+            <h3>Homework #3</h3>
+            <p>Coming soon...</p>
         </div>
     </div>
 
