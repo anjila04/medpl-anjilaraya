@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjila Raya Portfolio</title>
 
     <style>
@@ -47,7 +47,7 @@
 
         nav a:hover {
             background: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
 
         .container {
@@ -101,6 +101,7 @@
     </nav>
 
     <div class="container">
+
         <h2 id="homework">Homework Assignments</h2>
 
         <div class="card">
@@ -118,7 +119,7 @@
         <div class="card">
             <h3>Homework #3</h3>
             <p>Shallow & Deep Depth of Field, Field Blur, and Camera Raw adjustments.</p>
-            <a href="homework3part1.html">Part 1 →</a> | 
+            <a href="homework3part1.html">Part 1 →</a> |
             <a href="homework3part2.html">Part 2 →</a>
         </div>
 
@@ -132,19 +133,21 @@
         <!-- Homework 5 -->
         <div class="card">
             <h3><a href="#" id="toggleHomework5">Homework #5 →</a></h3>
-            <div id="homework5Content" style="display: none; margin-top:10px;">
+            <div id="homework5Content" style="display:none; margin-top:10px;">
                 <p>an image.</p>
                 <img src="homework5-image1.png" alt="Homework 5 Image">
             </div>
         </div>
 
-        <!-- ★ NEW IN-LAB ASSIGNMENTS SECTION ADDED -->
-        <h2 id="inlab">In-Lab Assignments</h2>
+        <!-- ⭐ NEW COLLAPSIBLE IN-LAB SECTION -->
+        <h2 id="inlab"><a href="#" id="toggleInLab">In-Lab Assignments →</a></h2>
 
-        <div class="card">
-            <h3>In-Lab #1</h3>
-            <p>First in-lab assignment image.</p>
-            <img src="inlab1.png" alt="In-Lab Assignment 1 Image">
+        <div id="inlabContent" style="display:none;">
+            <div class="card">
+                <h3>In-Lab #1</h3>
+                <p>First in-lab assignment image.</p>
+                <img src="inlab1.png" alt="In-Lab Assignment 1 Image">
+            </div>
         </div>
         <!-- END IN-LAB SECTION -->
 
@@ -152,7 +155,7 @@
 
         <div class="card">
             <h3><a href="#" id="toggleReflection1">Reflection #1 →</a></h3>
-            <div id="reflection1Content" style="display: none;" class="reflection">
+            <div id="reflection1Content" style="display:none;" class="reflection">
                 <p>Photography and image making are important to me because they help me tell stories. When I take a picture or create a graphic, I am not just saving a moment. I am choosing what I want people to notice. I decide what to focus on, what to leave out, and what feeling I want the viewer to have. This makes image making a very personal and thoughtful process.</p>
 
                 <p>When I read Susan Sontag’s <em>On Photography</em>, I understood even more how powerful images can be. Sontag wrote about photography long before smartphones existed, but her ideas still feel true today. She talked about how photos are everywhere and how they influence the way we think about the world. Today, images spread even faster because of social media. We see thousands of pictures every day. Because of that, I feel like I should be intentional when I create an image. I want to think about what message I am sending and how someone else might interpret it.</p>
@@ -199,6 +202,21 @@
             } else {
                 homework5Content.style.display = 'none';
                 toggleHomework5.textContent = "Homework #5 →";
+            }
+        });
+
+        // ⭐ In-Lab toggle
+        const toggleInLab = document.getElementById('toggleInLab');
+        const inlabContent = document.getElementById('inlabContent');
+
+        toggleInLab.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (inlabContent.style.display === 'none') {
+                inlabContent.style.display = 'block';
+                toggleInLab.textContent = "In-Lab Assignments ↓";
+            } else {
+                inlabContent.style.display = 'none';
+                toggleInLab.textContent = "In-Lab Assignments →";
             }
         });
     </script>
