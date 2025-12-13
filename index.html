@@ -139,6 +139,21 @@
             </div>
         </div>
 
+        <!-- Homework 7 -->
+        <div class="card">
+            <h3><a href="#" id="toggleHomework7">Homework #7 →</a></h3>
+            <div id="homework7Content" style="display:none; margin-top:10px;">
+                <p>
+                    I chose a wooden house with a village background with nature for my homework because it shows a peaceful life close to nature and looks simple and beautiful. 
+                    It also helped me use basic shapes and colors to clearly show houses and natural surroundings. 
+                    I used three colors in my image and used the paintbrush and eraser tools to create proper lining. 
+                    I also used square and triangle shapes in my drawing.
+                </p>
+                <img src="homework7-image1.png" alt="Homework 7 Image 1">
+                <img src="homework7-image2.png" alt="Homework 7 Image 2">
+            </div>
+        </div>
+
         <!-- ⭐ NEW COLLAPSIBLE IN-LAB SECTION -->
         <h2 id="inlab"><a href="#" id="toggleInLab">In-Lab Assignments →</a></h2>
 
@@ -205,6 +220,21 @@
             }
         });
 
+        // Homework 7 toggle
+        const toggleHomework7 = document.getElementById('toggleHomework7');
+        const homework7Content = document.getElementById('homework7Content');
+
+        toggleHomework7.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (homework7Content.style.display === 'none') {
+                homework7Content.style.display = 'block';
+                toggleHomework7.textContent = "Homework #7 ↓";
+            } else {
+                homework7Content.style.display = 'none';
+                toggleHomework7.textContent = "Homework #7 →";
+            }
+        });
+
         // ⭐ In-Lab toggle
         const toggleInLab = document.getElementById('toggleInLab');
         const inlabContent = document.getElementById('inlabContent');
@@ -222,4 +252,4 @@
     </script>
 
 </body>
-</html>     
+</html>
