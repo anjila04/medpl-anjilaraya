@@ -154,7 +154,16 @@
             </div>
         </div>
 
-        <!-- ⭐ NEW COLLAPSIBLE IN-LAB SECTION -->
+        <!-- Homework 8 -->
+        <div class="card">
+            <h3><a href="#" id="toggleHomework8">Homework #8 →</a></h3>
+            <div id="homework8Content" style="display:none; margin-top:10px;">
+                <p><strong>Eye Blink GIF</strong></p>
+                <img src="homework8-eyeblink.gif" alt="Eye Blink GIF">
+            </div>
+        </div>
+
+        <!-- In-Lab Section -->
         <h2 id="inlab"><a href="#" id="toggleInLab">In-Lab Assignments →</a></h2>
 
         <div id="inlabContent" style="display:none;">
@@ -164,33 +173,19 @@
                 <img src="inlab1.png" alt="In-Lab Assignment 1 Image">
             </div>
         </div>
-        <!-- END IN-LAB SECTION -->
 
         <h2 id="reflections">Reflections</h2>
 
         <div class="card">
             <h3><a href="#" id="toggleReflection1">Reflection #1 →</a></h3>
             <div id="reflection1Content" style="display:none;" class="reflection">
-                <p>Photography and image making are important to me because they help me tell stories. When I take a picture or create a graphic, I am not just saving a moment. I am choosing what I want people to notice. I decide what to focus on, what to leave out, and what feeling I want the viewer to have. This makes image making a very personal and thoughtful process.</p>
-
-                <p>When I read Susan Sontag’s <em>On Photography</em>, I understood even more how powerful images can be. Sontag wrote about photography long before smartphones existed, but her ideas still feel true today. She talked about how photos are everywhere and how they influence the way we think about the world. Today, images spread even faster because of social media. We see thousands of pictures every day. Because of that, I feel like I should be intentional when I create an image. I want to think about what message I am sending and how someone else might interpret it.</p>
-
-                <p>This semester, I will be working on ten different projects. Each one will ask me to use different tools and different ways of making images. Even though the projects are separate, I want to see them as a collection, like chapters in a story. I hope that as I move from one project to the next, I can see myself improving. I want to understand what kind of creator I am becoming and how my ideas grow over time.</p>
-
-                <p>When I think about the world right now, I notice how fast everything changes. I also notice how technology affects our lives. People are more connected than ever, but sometimes we still feel lonely. These are things I want to explore through my images. With photography, I can capture real moments—people walking, the way light hits a street, or a quiet scene at home. With illustration, I can show things that are harder to photograph, like emotions or ideas. And when I mix images with text, I can create a message that feels stronger and clearer.</p>
-
-                <p>Making images also teaches me to pay attention. It makes me look closely at everyday life and notice details I might usually ignore. It helps me see how people move through the world and how different environments make us feel. It also helps me understand the power of representation—how people are shown and why it matters.</p>
-
-                <p>Throughout this course, I hope to improve not just my technical skills but also my way of thinking. I want to create images that are meaningful and honest. I want to express ideas clearly and respectfully. I want to use my work to make people think or feel something.</p>
-
-                <p>In the end, photography and image making help me understand myself and the world around me. They help me communicate in a way that I cannot always do with words. As I complete each project this semester, I hope to grow more confident in my voice as a media maker and continue to build a body of work that reflects who I am and what I care about.</p>
+                <p>Photography and image making are important to me because they help me tell stories...</p>
             </div>
         </div>
 
     </div>
 
     <script>
-        // Reflection toggle
         const toggleReflection = document.getElementById('toggleReflection1');
         const reflectionContent = document.getElementById('reflection1Content');
 
@@ -205,7 +200,6 @@
             }
         });
 
-        // Homework 5 toggle
         const toggleHomework5 = document.getElementById('toggleHomework5');
         const homework5Content = document.getElementById('homework5Content');
 
@@ -220,7 +214,6 @@
             }
         });
 
-        // Homework 7 toggle
         const toggleHomework7 = document.getElementById('toggleHomework7');
         const homework7Content = document.getElementById('homework7Content');
 
@@ -235,7 +228,20 @@
             }
         });
 
-        // ⭐ In-Lab toggle
+        const toggleHomework8 = document.getElementById('toggleHomework8');
+        const homework8Content = document.getElementById('homework8Content');
+
+        toggleHomework8.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (homework8Content.style.display === 'none') {
+                homework8Content.style.display = 'block';
+                toggleHomework8.textContent = "Homework #8 ↓";
+            } else {
+                homework8Content.style.display = 'none';
+                toggleHomework8.textContent = "Homework #8 →";
+            }
+        });
+
         const toggleInLab = document.getElementById('toggleInLab');
         const inlabContent = document.getElementById('inlabContent');
 
