@@ -89,173 +89,197 @@
 
 <body>
 
-    <header>
-        <h1>ANJILA RAYA</h1>
-        <p>Emerging Media</p>
-    </header>
+<header>
+    <h1>ANJILA RAYA</h1>
+    <p>Emerging Media</p>
+</header>
 
-    <nav>
-        <a href="#homework">Homeworks</a>
-        <a href="#inlab">In-Lab</a>
-        <a href="#reflections">Reflections</a>
-    </nav>
+<nav>
+    <a href="#homework">Homeworks</a>
+    <a href="#inlab">In-Lab</a>
+    <a href="#reflections">Reflections</a>
+</nav>
 
-    <div class="container">
+<div class="container">
 
-        <h2 id="homework">Homework Assignments</h2>
+    <h2 id="homework">Homework Assignments</h2>
 
-        <div class="card">
-            <h3>Homework #1</h3>
-            <p>My personal statement.</p>
-            <a href="homework1.html">View →</a>
-        </div>
-
-        <div class="card">
-            <h3>Homework #2</h3>
-            <p>Cropping and resizing images and tonal range.</p>
-            <a href="homework2-image1.html">View →</a>
-        </div>
-
-        <div class="card">
-            <h3>Homework #3</h3>
-            <p>Shallow & Deep Depth of Field, Field Blur, and Camera Raw adjustments.</p>
-            <a href="homework3part1.html">Part 1 →</a> |
-            <a href="homework3part2.html">Part 2 →</a>
-        </div>
-
-        <div class="card">
-            <h3>Homework #4</h3>
-            <p>Photomontages on social issues.</p>
-            <a href="homework4-image1.html">Image 1 →</a> |
-            <a href="homework4-image2.html">Image 2 →</a>
-        </div>
-
-        <!-- Homework 5 -->
-        <div class="card">
-            <h3><a href="#" id="toggleHomework5">Homework #5 →</a></h3>
-            <div id="homework5Content" style="display:none; margin-top:10px;">
-                <p>an image.</p>
-                <img src="homework5-image1.png" alt="Homework 5 Image">
-            </div>
-        </div>
-
-        <!-- Homework 7 -->
-        <div class="card">
-            <h3><a href="#" id="toggleHomework7">Homework #7 →</a></h3>
-            <div id="homework7Content" style="display:none; margin-top:10px;">
-                <p>
-                    I chose a wooden house with a village background with nature for my homework because it shows a peaceful life close to nature and looks simple and beautiful. 
-                    It also helped me use basic shapes and colors to clearly show houses and natural surroundings. 
-                    I used three colors in my image and used the paintbrush and eraser tools to create proper lining. 
-                    I also used square and triangle shapes in my drawing.
-                </p>
-                <img src="homework7-image1.png" alt="Homework 7 Image 1">
-                <img src="homework7-image2.png" alt="Homework 7 Image 2">
-            </div>
-        </div>
-
-        <!-- Homework 8 -->
-        <div class="card">
-            <h3><a href="#" id="toggleHomework8">Homework #8 →</a></h3>
-            <div id="homework8Content" style="display:none; margin-top:10px;">
-                <p><strong>Eye Blink GIF</strong></p>
-                <img src="eyeblink.gif" alt="Eye Blink GIF">
-            </div>
-        </div>
-
-        <!-- In-Lab Section -->
-        <h2 id="inlab"><a href="#" id="toggleInLab">In-Lab Assignments →</a></h2>
-
-        <div id="inlabContent" style="display:none;">
-            <div class="card">
-                <h3>In-Lab #1</h3>
-                <p>First in-lab assignment image.</p>
-                <img src="inlab1.png" alt="In-Lab Assignment 1 Image">
-            </div>
-        </div>
-
-        <h2 id="reflections">Reflections</h2>
-
-        <div class="card">
-            <h3><a href="#" id="toggleReflection1">Reflection #1 →</a></h3>
-            <div id="reflection1Content" style="display:none;" class="reflection">
-                <p>Photography and image making are important to me because they help me tell stories...</p>
-            </div>
-        </div>
-
+    <div class="card">
+        <h3>Homework #1</h3>
+        <p>My personal statement.</p>
+        <a href="homework1.html">View →</a>
     </div>
 
-    <script>
-        const toggleReflection = document.getElementById('toggleReflection1');
-        const reflectionContent = document.getElementById('reflection1Content');
+    <div class="card">
+        <h3>Homework #2</h3>
+        <p>Cropping and resizing images and tonal range.</p>
+        <a href="homework2-image1.html">View →</a>
+    </div>
 
-        toggleReflection.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (reflectionContent.style.display === 'none') {
-                reflectionContent.style.display = 'block';
-                toggleReflection.textContent = "Reflection #1 ↓";
-            } else {
-                reflectionContent.style.display = 'none';
-                toggleReflection.textContent = "Reflection #1 →";
-            }
-        });
+    <div class="card">
+        <h3>Homework #3</h3>
+        <p>Shallow & Deep Depth of Field, Field Blur, and Camera Raw adjustments.</p>
+        <a href="homework3part1.html">Part 1 →</a> |
+        <a href="homework3part2.html">Part 2 →</a>
+    </div>
 
-        const toggleHomework5 = document.getElementById('toggleHomework5');
-        const homework5Content = document.getElementById('homework5Content');
+    <div class="card">
+        <h3>Homework #4</h3>
+        <p>Photomontages on social issues.</p>
+        <a href="homework4-image1.html">Image 1 →</a> |
+        <a href="homework4-image2.html">Image 2 →</a>
+    </div>
 
-        toggleHomework5.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (homework5Content.style.display === 'none') {
-                homework5Content.style.display = 'block';
-                toggleHomework5.textContent = "Homework #5 ↓";
-            } else {
-                homework5Content.style.display = 'none';
-                toggleHomework5.textContent = "Homework #5 →";
-            }
-        });
+    <!-- Homework 5 -->
+    <div class="card">
+        <h3><a href="#" id="toggleHomework5">Homework #5 →</a></h3>
+        <div id="homework5Content" style="display:none; margin-top:10px;">
+            <p>an image.</p>
+            <img src="homework5-image1.png" alt="Homework 5 Image">
+        </div>
+    </div>
 
-        const toggleHomework7 = document.getElementById('toggleHomework7');
-        const homework7Content = document.getElementById('homework7Content');
+    <!-- Homework 7 -->
+    <div class="card">
+        <h3><a href="#" id="toggleHomework7">Homework #7 →</a></h3>
+        <div id="homework7Content" style="display:none; margin-top:10px;">
+            <p>
+                I chose a wooden house with a village background with nature for my homework because it shows a peaceful life close to nature and looks simple and beautiful. 
+                It also helped me use basic shapes and colors to clearly show houses and natural surroundings. 
+                I used three colors in my image and used the paintbrush and eraser tools to create proper lining. 
+                I also used square and triangle shapes in my drawing.
+            </p>
+            <img src="homework7-image1.png" alt="Homework 7 Image 1">
+            <img src="homework7-image2.png" alt="Homework 7 Image 2">
+        </div>
+    </div>
 
-        toggleHomework7.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (homework7Content.style.display === 'none') {
-                homework7Content.style.display = 'block';
-                toggleHomework7.textContent = "Homework #7 ↓";
-            } else {
-                homework7Content.style.display = 'none';
-                toggleHomework7.textContent = "Homework #7 →";
-            }
-        });
+    <!-- Homework 8 -->
+    <div class="card">
+        <h3><a href="#" id="toggleHomework8">Homework #8 →</a></h3>
+        <div id="homework8Content" style="display:none; margin-top:10px;">
 
-        const toggleHomework8 = document.getElementById('toggleHomework8');
-        const homework8Content = document.getElementById('homework8Content');
+            <!-- Part 1 -->
+            <p><strong>Part 1: Eye Blink GIF</strong></p>
+            <img src="eyeblink.gif" alt="Eye Blink GIF">
 
-        toggleHomework8.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (homework8Content.style.display === 'none') {
-                homework8Content.style.display = 'block';
-                toggleHomework8.textContent = "Homework #8 ↓";
-            } else {
-                homework8Content.style.display = 'none';
-                toggleHomework8.textContent = "Homework #8 →";
-            }
-        });
+            <!-- Part 2 -->
+            <h4><a href="#" id="toggleHomework8Part2">Homework #8 Part 2: Puppet Warp →</a></h4>
+            <div id="homework8Part2Content" style="display:none; margin-top:10px;">
+                <p>Puppet Warp edit.</p>
+                <img src="homework8-part2-puppetwarp.png" alt="Homework 8 Part 2 Puppet Warp">
+            </div>
 
-        const toggleInLab = document.getElementById('toggleInLab');
-        const inlabContent = document.getElementById('inlabContent');
+        </div>
+    </div>
 
-        toggleInLab.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (inlabContent.style.display === 'none') {
-                inlabContent.style.display = 'block';
-                toggleInLab.textContent = "In-Lab Assignments ↓";
-            } else {
-                inlabContent.style.display = 'none';
-                toggleInLab.textContent = "In-Lab Assignments →";
-            }
-        });
-    </script>
+    <!-- In-Lab Section -->
+    <h2 id="inlab"><a href="#" id="toggleInLab">In-Lab Assignments →</a></h2>
+
+    <div id="inlabContent" style="display:none;">
+        <div class="card">
+            <h3>In-Lab #1</h3>
+            <p>First in-lab assignment image.</p>
+            <img src="inlab1.png" alt="In-Lab Assignment 1 Image">
+        </div>
+    </div>
+
+    <h2 id="reflections">Reflections</h2>
+
+    <div class="card">
+        <h3><a href="#" id="toggleReflection1">Reflection #1 →</a></h3>
+        <div id="reflection1Content" style="display:none;" class="reflection">
+            <p>Photography and image making are important to me because they help me tell stories...</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const toggleReflection = document.getElementById('toggleReflection1');
+    const reflectionContent = document.getElementById('reflection1Content');
+
+    toggleReflection.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (reflectionContent.style.display === 'none') {
+            reflectionContent.style.display = 'block';
+            toggleReflection.textContent = "Reflection #1 ↓";
+        } else {
+            reflectionContent.style.display = 'none';
+            toggleReflection.textContent = "Reflection #1 →";
+        }
+    });
+
+    const toggleHomework5 = document.getElementById('toggleHomework5');
+    const homework5Content = document.getElementById('homework5Content');
+
+    toggleHomework5.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (homework5Content.style.display === 'none') {
+            homework5Content.style.display = 'block';
+            toggleHomework5.textContent = "Homework #5 ↓";
+        } else {
+            homework5Content.style.display = 'none';
+            toggleHomework5.textContent = "Homework #5 →";
+        }
+    });
+
+    const toggleHomework7 = document.getElementById('toggleHomework7');
+    const homework7Content = document.getElementById('homework7Content');
+
+    toggleHomework7.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (homework7Content.style.display === 'none') {
+            homework7Content.style.display = 'block';
+            toggleHomework7.textContent = "Homework #7 ↓";
+        } else {
+            homework7Content.style.display = 'none';
+            toggleHomework7.textContent = "Homework #7 →";
+        }
+    });
+
+    const toggleHomework8 = document.getElementById('toggleHomework8');
+    const homework8Content = document.getElementById('homework8Content');
+
+    toggleHomework8.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (homework8Content.style.display === 'none') {
+            homework8Content.style.display = 'block';
+            toggleHomework8.textContent = "Homework #8 ↓";
+        } else {
+            homework8Content.style.display = 'none';
+            toggleHomework8.textContent = "Homework #8 →";
+        }
+    });
+
+    const toggleHomework8Part2 = document.getElementById('toggleHomework8Part2');
+    const homework8Part2Content = document.getElementById('homework8Part2Content');
+
+    toggleHomework8Part2.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (homework8Part2Content.style.display === 'none') {
+            homework8Part2Content.style.display = 'block';
+            toggleHomework8Part2.textContent = "Homework #8 Part 2: Puppet Warp ↓";
+        } else {
+            homework8Part2Content.style.display = 'none';
+            toggleHomework8Part2.textContent = "Homework #8 Part 2: Puppet Warp →";
+        }
+    });
+
+    const toggleInLab = document.getElementById('toggleInLab');
+    const inlabContent = document.getElementById('inlabContent');
+
+    toggleInLab.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (inlabContent.style.display === 'none') {
+            inlabContent.style.display = 'block';
+            toggleInLab.textContent = "In-Lab Assignments ↓";
+        } else {
+            inlabContent.style.display = 'none';
+            toggleInLab.textContent = "In-Lab Assignments →";
+        }
+    });
+</script>
 
 </body>
 </html>
