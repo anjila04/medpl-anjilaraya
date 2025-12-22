@@ -159,17 +159,24 @@
         <h3><a href="#" id="toggleHomework8">Homework #8 →</a></h3>
         <div id="homework8Content" style="display:none; margin-top:10px;">
 
-            <!-- Part 1 -->
             <p><strong>Part 1: Eye Blink GIF</strong></p>
             <img src="eyeblink.gif" alt="Eye Blink GIF">
 
-            <!-- Part 2 -->
             <h4><a href="#" id="toggleHomework8Part2">Homework #8 Part 2: Puppet Warp →</a></h4>
             <div id="homework8Part2Content" style="display:none; margin-top:10px;">
                 <p>Puppet Warp edit.</p>
                 <img src="puppet.gif" alt="Puppet Warp GIF">
             </div>
 
+        </div>
+    </div>
+
+    <!-- Homework 9 -->
+    <div class="card">
+        <h3><a href="#" id="toggleHomework9">Homework #9 →</a></h3>
+        <div id="homework9Content" style="display:none; margin-top:10px;">
+            <p><strong>Data Visualization Assignment</strong></p>
+            <img src="homework9-graph.png" alt="Homework 9 Data Visualization Graph">
         </div>
     </div>
 
@@ -263,6 +270,20 @@
         } else {
             homework8Part2Content.style.display = 'none';
             toggleHomework8Part2.textContent = "Homework #8 Part 2: Puppet Warp →";
+        }
+    });
+
+    const toggleHomework9 = document.getElementById('toggleHomework9');
+    const homework9Content = document.getElementById('homework9Content');
+
+    toggleHomework9.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (homework9Content.style.display === 'none') {
+            homework9Content.style.display = 'block';
+            toggleHomework9.textContent = "Homework #9 ↓";
+        } else {
+            homework9Content.style.display = 'none';
+            toggleHomework9.textContent = "Homework #9 →";
         }
     });
 
