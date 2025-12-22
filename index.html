@@ -158,16 +158,13 @@
     <div class="card">
         <h3><a href="#" id="toggleHomework8">Homework #8 →</a></h3>
         <div id="homework8Content" style="display:none; margin-top:10px;">
-
             <p><strong>Part 1: Eye Blink GIF</strong></p>
             <img src="eyeblink.gif" alt="Eye Blink GIF">
-
             <h4><a href="#" id="toggleHomework8Part2">Homework #8 Part 2: Puppet Warp →</a></h4>
             <div id="homework8Part2Content" style="display:none; margin-top:10px;">
                 <p>Puppet Warp edit.</p>
                 <img src="puppet.gif" alt="Puppet Warp GIF">
             </div>
-
         </div>
     </div>
 
@@ -195,7 +192,6 @@
 
     <!-- In-Lab Section -->
     <h2 id="inlab"><a href="#" id="toggleInLab">In-Lab Assignments →</a></h2>
-
     <div id="inlabContent" style="display:none;">
         <div class="card">
             <h3>In-Lab #1</h3>
@@ -204,8 +200,8 @@
         </div>
     </div>
 
+    <!-- Reflections -->
     <h2 id="reflections">Reflections</h2>
-
     <div class="card">
         <h3><a href="#" id="toggleReflection1">Reflection #1 →</a></h3>
         <div id="reflection1Content" style="display:none;" class="reflection">
@@ -216,118 +212,30 @@
 </div>
 
 <script>
-    const toggleReflection = document.getElementById('toggleReflection1');
-    const reflectionContent = document.getElementById('reflection1Content');
+    function setupToggle(toggleId, contentId, label) {
+        const toggle = document.getElementById(toggleId);
+        const content = document.getElementById(contentId);
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                toggle.textContent = label + " ↓";
+            } else {
+                content.style.display = 'none';
+                toggle.textContent = label + " →";
+            }
+        });
+    }
 
-    toggleReflection.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (reflectionContent.style.display === 'none') {
-            reflectionContent.style.display = 'block';
-            toggleReflection.textContent = "Reflection #1 ↓";
-        } else {
-            reflectionContent.style.display = 'none';
-            toggleReflection.textContent = "Reflection #1 →";
-        }
-    });
-
-    const toggleHomework5 = document.getElementById('toggleHomework5');
-    const homework5Content = document.getElementById('homework5Content');
-
-    toggleHomework5.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (homework5Content.style.display === 'none') {
-            homework5Content.style.display = 'block';
-            toggleHomework5.textContent = "Homework #5 ↓";
-        } else {
-            homework5Content.style.display = 'none';
-            toggleHomework5.textContent = "Homework #5 →";
-        }
-    });
-
-    const toggleHomework7 = document.getElementById('toggleHomework7');
-    const homework7Content = document.getElementById('homework7Content');
-
-    toggleHomework7.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (homework7Content.style.display === 'none') {
-            homework7Content.style.display = 'block';
-            toggleHomework7.textContent = "Homework #7 ↓";
-        } else {
-            homework7Content.style.display = 'none';
-            toggleHomework7.textContent = "Homework #7 →";
-        }
-    });
-
-    const toggleHomework8 = document.getElementById('toggleHomework8');
-    const homework8Content = document.getElementById('homework8Content');
-
-    toggleHomework8.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (homework8Content.style.display === 'none') {
-            homework8Content.style.display = 'block';
-            toggleHomework8.textContent = "Homework #8 ↓";
-        } else {
-            homework8Content.style.display = 'none';
-            toggleHomework8.textContent = "Homework #8 →";
-        }
-    });
-
-    const toggleHomework8Part2 = document.getElementById('toggleHomework8Part2');
-    const homework8Part2Content = document.getElementById('homework8Part2Content');
-
-    toggleHomework8Part2.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (homework8Part2Content.style.display === 'none') {
-            homework8Part2Content.style.display = 'block';
-            toggleHomework8Part2.textContent = "Homework #8 Part 2: Puppet Warp ↓";
-        } else {
-            homework8Part2Content.style.display = 'none';
-            toggleHomework8Part2.textContent = "Homework #8 Part 2: Puppet Warp →";
-        }
-    });
-
-    const toggleHomework9 = document.getElementById('toggleHomework9');
-    const homework9Content = document.getElementById('homework9Content');
-
-    toggleHomework9.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (homework9Content.style.display === 'none') {
-            homework9Content.style.display = 'block';
-            toggleHomework9.textContent = "Homework #9 ↓";
-        } else {
-            homework9Content.style.display = 'none';
-            toggleHomework9.textContent = "Homework #9 →";
-        }
-    });
-
-    // NEW: Homework 10 Toggle
-    const toggleHomework10 = document.getElementById('toggleHomework10');
-    const homework10Content = document.getElementById('homework10Content');
-
-    toggleHomework10.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (homework10Content.style.display === 'none') {
-            homework10Content.style.display = 'block';
-            toggleHomework10.textContent = "Homework #10 ↓";
-        } else {
-            homework10Content.style.display = 'none';
-            toggleHomework10.textContent = "Homework #10 →";
-        }
-    });
-
-    const toggleInLab = document.getElementById('toggleInLab');
-    const inlabContent = document.getElementById('inlabContent');
-
-    toggleInLab.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (inlabContent.style.display === 'none') {
-            inlabContent.style.display = 'block';
-            toggleInLab.textContent = "In-Lab Assignments ↓";
-        } else {
-            inlabContent.style.display = 'none';
-            toggleInLab.textContent = "In-Lab Assignments →";
-        }
-    });
+    // Setup all toggles
+    setupToggle('toggleReflection1', 'reflection1Content', 'Reflection #1');
+    setupToggle('toggleHomework5', 'homework5Content', 'Homework #5');
+    setupToggle('toggleHomework7', 'homework7Content', 'Homework #7');
+    setupToggle('toggleHomework8', 'homework8Content', 'Homework #8');
+    setupToggle('toggleHomework8Part2', 'homework8Part2Content', 'Homework #8 Part 2: Puppet Warp');
+    setupToggle('toggleHomework9', 'homework9Content', 'Homework #9');
+    setupToggle('toggleHomework10', 'homework10Content', 'Homework #10');
+    setupToggle('toggleInLab', 'inlabContent', 'In-Lab Assignments');
 </script>
 
 </body>
