@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjila Raya Portfolio</title>
 
     <style>
@@ -180,6 +180,19 @@
         </div>
     </div>
 
+    <!-- Homework 10 (Interactive Story) -->
+    <div class="card">
+        <h3><a href="#" id="toggleHomework10">Homework #10 →</a></h3>
+        <div id="homework10Content" style="display:none; margin-top:10px;">
+            <p><strong>Interactive Story: "The Girl Who Followed the Light"</strong></p>
+            <p>
+                This is my web-based non-linear fairy story assignment.  
+                Click below to start the story:
+            </p>
+            <a href="fairy-story/index.html" class="button">Start Story →</a>
+        </div>
+    </div>
+
     <!-- In-Lab Section -->
     <h2 id="inlab"><a href="#" id="toggleInLab">In-Lab Assignments →</a></h2>
 
@@ -284,6 +297,21 @@
         } else {
             homework9Content.style.display = 'none';
             toggleHomework9.textContent = "Homework #9 →";
+        }
+    });
+
+    // NEW: Homework 10 Toggle
+    const toggleHomework10 = document.getElementById('toggleHomework10');
+    const homework10Content = document.getElementById('homework10Content');
+
+    toggleHomework10.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (homework10Content.style.display === 'none') {
+            homework10Content.style.display = 'block';
+            toggleHomework10.textContent = "Homework #10 ↓";
+        } else {
+            homework10Content.style.display = 'none';
+            toggleHomework10.textContent = "Homework #10 →";
         }
     });
 
