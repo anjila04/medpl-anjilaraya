@@ -134,7 +134,7 @@
     <div class="card">
         <h3><a href="#" id="toggleHomework5">Homework #5 →</a></h3>
         <div id="homework5Content" style="display:none; margin-top:10px;">
-            <p>an image.</p>
+            <p>An image.</p>
             <img src="homework5-image1.png" alt="Homework 5 Image">
         </div>
     </div>
@@ -143,12 +143,7 @@
     <div class="card">
         <h3><a href="#" id="toggleHomework7">Homework #7 →</a></h3>
         <div id="homework7Content" style="display:none; margin-top:10px;">
-            <p>
-                I chose a wooden house with a village background with nature for my homework because it shows a peaceful life close to nature and looks simple and beautiful. 
-                It also helped me use basic shapes and colors to clearly show houses and natural surroundings. 
-                I used three colors in my image and used the paintbrush and eraser tools to create proper lining. 
-                I also used square and triangle shapes in my drawing.
-            </p>
+            <p>I chose a wooden house with a village background with nature for my homework because it shows a peaceful life close to nature and looks simple and beautiful. It also helped me use basic shapes and colors to clearly show houses and natural surroundings. I used three colors in my image and used the paintbrush and eraser tools to create proper lining. I also used square and triangle shapes in my drawing.</p>
             <img src="homework7-image1.png" alt="Homework 7 Image 1">
             <img src="homework7-image2.png" alt="Homework 7 Image 2">
         </div>
@@ -182,10 +177,7 @@
         <h3><a href="#" id="toggleHomework10">Homework #10 →</a></h3>
         <div id="homework10Content" style="display:none; margin-top:10px;">
             <p><strong>Interactive Story: "The Girl Who Followed the Light"</strong></p>
-            <p>
-                This is my web-based non-linear fairy story assignment.  
-                Click below to start the story:
-            </p>
+            <p>This is my web-based non-linear fairy story assignment. Click below to start the story:</p>
             <a href="fairy-story/index.html" class="button">Start Story →</a>
         </div>
     </div>
@@ -229,12 +221,12 @@
         const content = document.getElementById(contentId);
         toggle.addEventListener('click', function(e) {
             e.preventDefault();
-            if (content.style.display === 'none') {
+            if (content.style.display === 'none' || content.style.display === '') {
                 content.style.display = 'block';
-                toggle.textContent = label + " ↓";
+                toggle.innerHTML = label + " ↓";
             } else {
                 content.style.display = 'none';
-                toggle.textContent = label + " →";
+                toggle.innerHTML = label + " →";
             }
         });
     }
